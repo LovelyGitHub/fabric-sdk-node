@@ -361,8 +361,8 @@ test('\n\n** Packager tests **\n\n', function(t) {
 		var pipe = fs.createReadStream(tmpFile).pipe(gunzip()).pipe(tar.extract(destDir));
 
 		pipe.on('close', function() {
-			var checkPath = path.join(destDir, 'src', 'github.com', 'example_cc');
-			t.equal(fs.existsSync(checkPath), true, 'The tar.gz file produced by Packager.package() has the "src/github.com/example_cc" folder');
+			var checkPath = path.join(destDir, 'src', 'github.com', 'example_aa');
+			t.equal(fs.existsSync(checkPath), true, 'The tar.gz file produced by Packager.package() has the "src/github.com/example_aa" folder');
 			t.comment('Verify byte data on close');
 		});
 		t.comment('Verify byte data end');
